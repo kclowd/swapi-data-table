@@ -64,7 +64,7 @@ export class TableComponent implements OnInit {
   }
 
   formatLargeNumber(x: number) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, " ");
+    return Math.round(x).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");;
 }
 
 }
