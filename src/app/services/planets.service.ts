@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ApiHttpService } from './api-http.service';
 
 @Injectable({
@@ -9,7 +10,7 @@ export class PlanetsService {
 
   constructor( private apiHttpService: ApiHttpService ) { }
 
-  getPlanets() {
-    return this.apiHttpService.get('https://swapi.dev/api/planets/');
+  getPlanets(): Observable<any> {
+    return this.apiHttpService.get('https://swapi.dev/api/planets?page=1');
   }
 }
