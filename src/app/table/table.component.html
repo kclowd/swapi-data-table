@@ -8,7 +8,7 @@
 <table *ngIf="planets.length > 0 && !isLoading && !showError" mat-table [dataSource]="planets" class="planet-table">
     <ng-container matColumnDef="planet-name">
         <th mat-header-cell *matHeaderCellDef> Name </th>
-        <td mat-cell *matCellDef="let planet"> {{planet.name}} </td>
+        <td mat-cell *matCellDef="let planet"> <a href="{{planet.url}}">{{planet.name}} </a></td>
     </ng-container>
 
     <ng-container matColumnDef="planet-climate">

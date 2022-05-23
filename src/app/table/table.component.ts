@@ -41,6 +41,7 @@ export class TableComponent implements OnInit {
     planets.forEach((planet: any) => {
       formattedData.push({
         name: planet.name,
+        url: planet.url,
         climate: planet.climate == 'unknown' ? '?' : planet.climate,
         residents: planet.residents.length,
         terrains: planet.terrain == 'unknown' ? '?' : planet.terrain,
